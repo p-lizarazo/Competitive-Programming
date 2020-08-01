@@ -41,7 +41,7 @@ void update(int t[],int v, int tl, int tr, int pos, int new_val){
         t[v] = new_val;
     } else {
         int tm = (tl+tr)/2;
-        if(tm<=pos)
+        if(pos<=tm)
             update(t,2*v,tl,tm,pos,new_val);
         else
             update(t,2*v+1,tm+1,tr,pos,new_val);
